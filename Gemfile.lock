@@ -92,6 +92,8 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     graphql (2.0.23)
@@ -102,6 +104,7 @@ GEM
       reline (>= 0.3.0)
     jaro_winkler (1.5.6)
     json (2.6.3)
+    jwt (2.7.1)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -257,7 +260,9 @@ DEPENDENCIES
   bootsnap
   debug
   factory_bot_rails
+  fast_jsonapi
   graphql
+  jwt
   pg (~> 1.1)
   pry-byebug
   puma (~> 5.0)

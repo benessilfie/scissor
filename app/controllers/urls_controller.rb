@@ -4,7 +4,7 @@ class UrlsController < ApplicationController
     @url.update!(user: current_user) if current_user
     @url.update!(short_url: "#{request.base_url}/#{@url.short_code}")
 
-    render json: { short_link: @url.short_url }, status: :created
+    render json: { short_url: @url.short_url, short_code: @url.short_code }, status: :created
   end
 
   def redirect
@@ -13,7 +13,8 @@ class UrlsController < ApplicationController
     return unless @url
 
     @url.increment!(:count)
-    render json: { url: @url.original_url }, status: :ok
+    corrected_url = @url.original_url.gsub(/^w{4}\./, "")
+    redirect_to URI::HTTP.build(host: corrected_url).to_s, allow_other_host: true
   end
 
   def url_stats

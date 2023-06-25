@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: 'application#healthcheck'
+  post '/', to: 'graphql#execute'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  def healthcheck
+    render json: { message: 'OK' }, status: :ok
+  end
 end

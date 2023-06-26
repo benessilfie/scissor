@@ -21,7 +21,7 @@ class UrlsController < ApplicationController
     @url = Url.find_by!(short_code: params[:short_code])
 
     if @url
-      render json: { count: @url.count }, status: :ok
+      render json: { number_of_times_visted: @url.count }, status: :ok
     else
       render json: { errors: "URL not found" }, status: :not_found
     end

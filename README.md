@@ -210,7 +210,7 @@ The REST API follows a traditional RESTful architecture and uses HTTP verbs to i
 
 ##### 2. Redirect to Original URL
 
-- `GET /:short_code`
+- `GET /:short_code` - redirect to original url
 
 - `Headers` - `{Authorization: 'Bearer <token>'}` `OPTIONAL`
 
@@ -218,7 +218,7 @@ The REST API follows a traditional RESTful architecture and uses HTTP verbs to i
 
 `200 - OK`
 
-`Redirected to Original link`
+`Redirects to the original url`
 
 ## Analytics
 
@@ -324,7 +324,7 @@ query {
 
 ### `Mutations`
 
-#### `User
+#### `User`
 
 ##### 1. Create User
 
@@ -497,7 +497,7 @@ mutation {
 }
 ```
 
-#### `Note`
+#### `URL`
 
 ##### 1. Create Shortened Url
 
@@ -539,7 +539,7 @@ mutation {
 
 ##### 2. Resolve Short URL
 
-- `resolveShortUrl` - return a redirect URL when provided the short code
+- `resolveShortUrl` - returns a redirect URL when provided the short code
 
 **Request Body**
 

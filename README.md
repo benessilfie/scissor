@@ -222,7 +222,7 @@ The REST API follows a traditional RESTful architecture and uses HTTP verbs to i
 
 ## Analytics
 
-##### 4. Update Note
+##### 1. Get URL Stats
 
 - `GET /:short_code/stats` - Check the number of times the short link has been visited
 

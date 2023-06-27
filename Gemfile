@@ -26,3 +26,5 @@ group :development do
   gem "annotate"
   gem "solargraph"
 end
+
+gem "dockerfile-rails", ">= 1.5", :group => :development

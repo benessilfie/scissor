@@ -2,6 +2,7 @@ require_relative "boot"
 require "rails/all"
 
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load if %w[development test].include? ENV["RAILS_ENV"]
 
 module Scissors
   class Application < Rails::Application
